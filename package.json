@@ -1,0 +1,9 @@
+{
+  "name": "picasso",
+  "version": "4.2.0",
+  "description": "draw art while chatting together",
+  "dependencies": {
+    "express": "^4.15.2",
+    "socket.io": "^2.0.4"
+  }
+}

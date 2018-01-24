@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Picasso</title>
+    <link rel="stylesheet" href="/style.css">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="shortcut icon" type="image/x-icon" href="http://www.celesteprize.com/_files/opere/2014_68287_266667.jpg">
+
+</head>
+<body>
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        var socket = io();
+    </script>
+    <canvas id="art">Browser doesn't support Canvas!</canvas>
+    <nav id="nav">
+        <i class="material-icons" id="menuShow"  onclick="menuShow()">keyboard_arrow_up</i>
+        <ul id="menu" style="display: none">
+            <li><i class="material-icons" id="down" onclick="menuHide()">keyboard_arrow_down</i></li>
+            <li><input type="color" id="color" onchange="colorChange()"></li>
+            <li><input type="text" id="numb" value="10"></li>
+            <li style="padding-left: 5em"><input type="checkbox" id="write" name="write" value="write"></li>
+            <li><input type="text" id="text" value="text"></li>
+        </ul>
+    </nav>
+    <i class="material-icons" id="chat" onclick="chatShow()">chat_bubble_outline</i>
+    <main id="main">
+        <header><i class="material-icons" id="clear" onclick="chatHide()">clear</i></header>
+        <footer>
+            <ul id="messages">
+
+            </ul>
+            <div id="send">
+                <input type="text" placeholder="message.." class="message" id="message">
+                <button class="button" onclick="sendText()">Senden</button>
+            </div>
+        </footer>
+    </main>
+    <script src="/script.js"></script>
+  </body>
+</html>
