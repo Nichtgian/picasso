@@ -1,6 +1,11 @@
 let canvas = document.getElementById("art");
 let ctx = canvas.getContext("2d");
-let press = false;
+
+let one = new Line();
+one.draw();
+
+
+/*let press = false;
 let lastx, lasty;
 
 window.addEventListener("resize", canvasSize, false);
@@ -105,3 +110,4 @@ function chatHide() {
     document.getElementById("main").style.display = "none";
     document.getElementById("chat").style.display = "block";
 }
+*/
