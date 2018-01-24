@@ -1,14 +1,27 @@
 let canvas = document.getElementById("art");
 let ctx = canvas.getContext("2d");
 
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+let lines = [];
+let index = 0;
+
+let one;
+/*
 let one = new Line();
-one.draw();
+
+one.addPoint({x: 90, y: 10});
+one.addPoint({x: 50, y: 10});
+one.addPoint({x: 70, y: 100});
+one.addPoint({x: 40, y: 70});
+
+one.draw();*/
 
 
 /*let press = false;
 let lastx, lasty;
 
-window.addEventListener("resize", canvasSize, false);
 canvasSize();
 menuHide();
 chatHide();
@@ -78,6 +91,9 @@ function draw(x, y, down) {
     lastX = x;
     lastY = y;
 }
+*/
+
+window.addEventListener("resize", canvasSize, false);
 
 function canvasSize() {
     canvas.width = window.innerWidth;
@@ -110,4 +126,3 @@ function chatHide() {
     document.getElementById("main").style.display = "none";
     document.getElementById("chat").style.display = "block";
 }
-*/
