@@ -5,9 +5,7 @@ canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
 let lines = [];
-let index = 0;
 
-let one;
 /*
 let one = new Line();
 
@@ -98,6 +96,9 @@ window.addEventListener("resize", canvasSize, false);
 function canvasSize() {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
+    for (let i = 0; i < lines.length; i++) {
+        lines[i].draw();
+    }
 }
 
 function colorChange() {
